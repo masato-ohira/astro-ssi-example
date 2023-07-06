@@ -1,0 +1,31 @@
+---
+import { MyFooter } from '@/components/ui/MyFooter'
+import { MyHeader } from '@/components/ui/MyHeader'
+import MyHead from '@/components/MyHead.astro'
+import SSI from '@/components/SSI.astro'
+
+export interface Props {
+  meta: {
+    title: string
+    description?: string
+  }
+}
+export type MetaType = Props
+const isDev = process.env.NODE_ENV == 'development'
+const { meta } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang='ja'>
+  <head>
+    <meta charset='UTF-8' />
+    <title>{meta.title}</title>
+    <meta name='description' content='Astro description' />
+    {isDev ? <MyHead /> : <SSI name='cmn-head' />}
+  </head>
+  <body>
+    {isDev ? <MyHeader client:load /> : <SSI name='header' />}
+    <slot />
+    {isDev ? <MyFooter client:load /> : <SSI name='footer' />}
+  </body>
+</html>

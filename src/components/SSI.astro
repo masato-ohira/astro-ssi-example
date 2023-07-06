@@ -1,0 +1,6 @@
+---
+const { name } = Astro.props
+const ssiTag = `<!--#include virtual="/ssi/${name}/index.html" -->`
+---
+
+<Fragment set:html={ssiTag} />

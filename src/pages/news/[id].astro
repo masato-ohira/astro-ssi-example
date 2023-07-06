@@ -1,0 +1,26 @@
+---
+import { find } from 'lodash-es'
+import newsJson from '@/json/news.json'
+import Layout from '@/layouts/Layout.astro'
+import { NewsDetail, NewsType } from '@/components/views/NewsDetail'
+
+export function getStaticPaths() {
+  return newsJson.map((i) => {
+    return {
+      params: { id: i.id },
+    }
+  })
+}
+
+const { id } = Astro.params
+const entry = find(newsJson, (i) => i.id == id) as NewsType
+const meta = {
+  title: `${entry?.title} | DemoSite`,
+}
+---
+
+<Layout meta={meta}>
+  <main>
+    {entry && <NewsDetail client:load news={entry} />}
+  </main>
+</Layout>
