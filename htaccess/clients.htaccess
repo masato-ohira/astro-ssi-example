@@ -1,0 +1,4 @@
+require user test staff2
+
+Options +Includes
+AddHandler server-parsed .html
