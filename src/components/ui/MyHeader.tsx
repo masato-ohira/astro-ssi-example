@@ -7,12 +7,12 @@ import { fontSizes } from '@/styles/mixins/fonts'
 export const MyHeader = () => {
   return (
     <StyledHeader>
-      <div className='header-logo'>
+      <a className='header-logo' href='/'>
         <div className='header-icon'>
           <MyIcon name={'react'} />
         </div>
         <h1>DemoSite</h1>
-      </div>
+      </a>
       <div className='header-menu'>
         <MyIcon name={'menu'} />
       </div>
@@ -34,6 +34,8 @@ const StyledHeader = styled.header`
     flex-wrap: wrap;
     align-items: center;
     column-gap: 7px;
+    text-decoration: none;
+    color: #fff;
   }
 
   .header-icon {
