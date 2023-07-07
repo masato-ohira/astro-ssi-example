@@ -11,6 +11,7 @@
     "icons": "node npm-scripts/icons/index.cjs",
     "placehold": "node npm-scripts/placehold/index.cjs",
     "test": "jest --verbose",
+    "deploy": "yarn ssg && yarn git && git ftp push -k && git push",
     "git": "git add . && git commit -a -m $M"
   },
   "dependencies": {

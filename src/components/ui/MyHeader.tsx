@@ -13,9 +13,9 @@ export const MyHeader = () => {
         </div>
         <h1>DemoSite</h1>
       </a>
-      <div className='header-menu'>
+      <a href='/' className='header-menu'>
         <MyIcon name={'menu'} />
-      </div>
+      </a>
     </StyledHeader>
   )
 }
@@ -47,5 +47,8 @@ const StyledHeader = styled.header`
 
   .header-menu {
     font-size: ${fontSizes['3xl']};
+    color: #fff;
+    text-decoration: none;
+    display: block;
   }
 `
