@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <title>新たな教育政策が発表される | DemoSite</title>
     <meta name="description" content="Astro description">
-    <!--#include virtual="/ssi/cmn-head/index.html" -->
+    <!-- start ssi cmn-head -->
+<!--#include virtual="/ssi/cmn-head/index.html" -->
+<!-- end ssi cmn-head -->
   </head>
   <body>
-    <!--#include virtual="/ssi/header/index.html" -->
+    <!-- start ssi header -->
+<!--#include virtual="/ssi/header/index.html" -->
+<!-- end ssi header -->
     
   <main>
     <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var d;{let h={0:t=>t,1:t=>JSON.parse(t,a),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(JSON.parse(t,a)),5:t=>new Set(JSON.parse(t,a)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(JSON.parse(t)),9:t=>new Uint16Array(JSON.parse(t)),10:t=>new Uint32Array(JSON.parse(t))},a=(t,e)=>{if(t===""||!Array.isArray(e))return e;let[r,n]=e;return r in h?h[r](n):void 0};customElements.get("astro-island")||customElements.define("astro-island",(d=class extends HTMLElement{constructor(){super(...arguments);this.hydrate=async()=>{var o;if(!this.hydrator||!this.isConnected)return;let e=(o=this.parentElement)==null?void 0:o.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let r=this.querySelectorAll("astro-slot"),n={},c=this.querySelectorAll("template[data-astro-template]");for(let s of c){let i=s.closest(this.tagName);i!=null&&i.isSameNode(this)&&(n[s.getAttribute("data-astro-template")||"default"]=s.innerHTML,s.remove())}for(let s of r){let i=s.closest(this.tagName);i!=null&&i.isSameNode(this)&&(n[s.getAttribute("name")||"default"]=s.innerHTML)}let l=this.hasAttribute("props")?JSON.parse(this.getAttribute("props"),a):{};await this.hydrator(this)(this.Component,l,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))}}connectedCallback(){!this.hasAttribute("await-children")||this.firstChild?this.childrenConnectedCallback():new MutationObserver((e,r)=>{r.disconnect(),setTimeout(()=>this.childrenConnectedCallback(),0)}).observe(this,{childList:!0})}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}start(){let e=JSON.parse(this.getAttribute("opts")),r=this.getAttribute("client");if(Astro[r]===void 0){window.addEventListener(`astro:${r}`,()=>this.start(),{once:!0});return}Astro[r](async()=>{let n=this.getAttribute("renderer-url"),[c,{default:l}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),o=this.getAttribute("component-export")||"default";if(!o.includes("."))this.Component=c[o];else{this.Component=c;for(let s of o.split("."))this.Component=this.Component[s]}return this.hydrator=l,this.hydrate},e,this)}attributeChangedCallback(){this.hydrate()}},d.observedAttributes=["props"],d))}})();</script><astro-island uid="ZduFPB" prefix="r0" component-url="/_astro/NewsDetail.483509f7.js" component-export="NewsDetail" renderer-url="/_astro/client.6ec92a41.js" props="{&quot;news&quot;:[0,{&quot;id&quot;:[0,&quot;8&quot;],&quot;date&quot;:[0,&quot;2023-06-26&quot;],&quot;title&quot;:[0,&quot;新たな教育政策が発表される&quot;],&quot;content&quot;:[0,&quot;教育省は新たな教育政策を発表しました。この政策の目的は、教育の質の向上と、より多様な教育機会の提供です。具体的な施策としては、教師の研修や授業の内容の見直し、ICT（情報通信技術）の活用などが含まれています。また、学生の個別のニーズに応じた教育の実施や、地域との連携強化も重要な要素とされています。この政策の推進により、将来の日本の教育水準の向上が期待されます。&quot;]}]}" ssr="" client="load" opts="{&quot;name&quot;:&quot;NewsDetail&quot;,&quot;value&quot;:true}" await-children=""><div class="css-1o48vty"><div class="css-dsv25v"><div class="news-title"><h1>新たな教育政策が発表される</h1><p>2023/06/26</p></div><div class="news-img"><img src="/static/img/spots/mv-8.jpg" alt=""/></div><div class="news-content">教育省は新たな教育政策を発表しました。この政策の目的は、教育の質の向上と、より多様な教育機会の提供です。具体的な施策としては、教師の研修や授業の内容の見直し、ICT（情報通信技術）の活用などが含まれています。また、学生の個別のニーズに応じた教育の実施や、地域との連携強化も重要な要素とされています。この政策の推進により、将来の日本の教育水準の向上が期待されます。</div></div></div></astro-island>
   </main>
 
-    <!--#include virtual="/ssi/footer/index.html" -->
+    <!-- start ssi footer -->
+<!--#include virtual="/ssi/footer/index.html" -->
+<!-- end ssi footer -->
   </body>
 </html>

@@ -3,4 +3,6 @@ const { name } = Astro.props
 const ssiTag = `<!--#include virtual="/ssi/${name}/index.html" -->`
 ---
 
+<Fragment set:html={`<!-- start ssi ${name} -->`} />
 <Fragment set:html={ssiTag} />
+<Fragment set:html={`<!-- end ssi ${name} -->`} />
